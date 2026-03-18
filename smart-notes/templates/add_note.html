@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Note</title>
+</head>
+<body>
+
+<h1>Add Note</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input name="title" placeholder="Title"><br><br>
+    <input name="category" placeholder="Category"><br><br>
+    <textarea name="content" placeholder="Content"></textarea><br><br>
+    <input name="tags" placeholder="Tags"><br><br>
+
+    <select name="priority">
+        <option>Normal</option>
+        <option>Important</option>
+    </select><br><br>
+
+    <input type="file" name="image"><br><br>
+
+    <button type="submit">Add Note</button>
+</form>
+
+</body>
+</html>

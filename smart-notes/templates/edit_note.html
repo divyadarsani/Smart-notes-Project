@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Note</title>
+</head>
+<body>
+
+<h1>Edit Note</h1>
+
+<form method="POST">
+    <input name="title" value="{{note[1]}}"><br><br>
+    <input name="category" value="{{note[2]}}"><br><br>
+    <textarea name="content">{{note[3]}}</textarea><br><br>
+    <input name="tags" value="{{note[4]}}"><br><br>
+
+    <select name="priority">
+        <option {% if note[5]=='Normal' %}selected{% endif %}>Normal</option>
+        <option {% if note[5]=='Important' %}selected{% endif %}>Important</option>
+    </select><br><br>
+
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

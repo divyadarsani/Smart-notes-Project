@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Notes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Smart Notes</h1>
+
+<form method="POST" action="/search">
+    <input type="text" name="query" placeholder="Search...">
+    <button>Search</button>
+</form>
+
+<br>
+<a href="/add">➕ Add Note</a>
+
+<hr>
+
+{% for note in notes %}
+<div class="card">
+
+    <h2>{{note[1]}}</h2>
+
+    <p>{{note[3][:100]}}...</p>
+
+    {% if note[6] %}
+        <img src="/uploads/{{note[6]}}" width="120">
+    {% endif %}
+
+    <br><br>
+
+    <!-- ACTION BUTTONS -->
+    <a href="/note/{{note[0]}}">👁 View</a> |
+    <a href="/edit/{{note[0]}}">✏️ Edit</a> |
+    <a href="/explain/{{note[0]}}">🧠 Explain</a> |
+    <a href="/delete/{{note[0]}}">🗑 Delete</a> |
+    <a href="/export/{{note[0]}}">📄 Export PDF</a>
+
+</div>
+{% endfor %}
+
+</body>
+</html>

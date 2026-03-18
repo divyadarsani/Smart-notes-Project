@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Note</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>{{note[1]}}</h1>
+
+<p><strong>Category:</strong> {{note[2]}}</p>
+<p><strong>Tags:</strong> {{note[4]}}</p>
+<p><strong>Priority:</strong> {{note[5]}}</p>
+
+<hr>
+
+<p>{{note[3]}}</p>
+
+{% if note[6] %}
+    <img src="/uploads/{{note[6]}}" width="300">
+{% endif %}
+
+<br><br>
+
+<a href="/">Back</a>
+
+</body>
+</html>
